@@ -1,6 +1,7 @@
 // container/src/App.js
 import React from 'react';
 import HelloReactApp from './components/HelloReactApp';
+import HelloTestApp from './components/HelloTestApp';
 import { Route, Switch, Router, Link } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
@@ -9,7 +10,7 @@ const history = createBrowserHistory();
 const Header = () => (
     <div>
         <Link to='/'>home</Link><br />
-        <Link to='/react'>use react</Link>
+        <Link to='/test'>use test</Link>
     </div >
 )
 
@@ -19,7 +20,8 @@ export default () => {
             <Header />
             <hr />
             <Switch>
-                <Route path='/' component={HelloReactApp} />
+                <Route path='/' exact component={HelloReactApp} />
+                <Route path='/test' component={HelloTestApp} />
             </Switch>
         </Router>
     )

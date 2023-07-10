@@ -1,9 +1,9 @@
-import { mount } from '../../../helloReact/src/bootstrap'
+import { mount } from '../../../helloTest/src/bootstrap'
 import React, { useRef, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 
 export default () => {
-    console.log('home');
+  console.log('testing-app')
     const ref = useRef(null);
     const history = useHistory();
 
